@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pulse</title>
+	<link rel="stylesheet" type="text/css" href="libraries/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="libraries/glyphicons/glyphicons.css">
+	<link rel="stylesheet" type="text/css" href="libraries/bootstrap-4.3.1/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="libraries/materialize/material_icons.css">
+	<link rel="stylesheet" type="text/css" href="style/player.css">
+	<link rel="stylesheet" type="text/css" href="style/app.css">
+	<link rel="stylesheet" type="text/css" href="style/window.css">
+</head>
+<body>
+
+	<style type="text/css">
+		/* Scrollbar */
+		/* width */
+		::-webkit-scrollbar {
+		  width: 7px;
+		}
+
+		/* Track */
+		::-webkit-scrollbar-track {
+		  background: #0b121e; 
+		  border-radius: 50px;
+		}
+
+		/* Handle */
+		::-webkit-scrollbar-thumb {
+		  background: white; 
+		}
+
+		/* Handle on hover */
+		::-webkit-scrollbar-thumb:hover {
+		  background: #aaa; 
+		}
+	</style>
+
+	<style type="text/css">
+		body {
+			background-color: #0b121e;
+			color: white;
+			overflow-x: hidden;
+			overflow-y: scroll;
+		}
+
+		#player {
+			width: 100%;
+			color: white;
+			background-color: #0b121e;
+		}
+
+		#app {
+			padding-top: 22px;
+			display: inline-table;
+		}
+
+		#musicList {
+			width: 60%;
+			margin: auto;
+			text-align: center;
+		}
+
+		.bar-title {
+			padding-left: 10px;
+			color: white;
+			font-family: Cosmic Sans;
+			font-size: 20px;
+			background-color: #0b121e;
+		}
+
+		.song {
+			cursor: pointer;
+			display: inline-flex;
+			background-color: #1c232f;
+			width: 80%;
+			height: 32px;
+			margin: auto;
+			margin-top: 10px;
+		}
+
+		.song-album {
+			width: 32px;
+			height: 32px;
+			min-height: 32px;
+			min-width: 32px;
+			border-radius: 50%;
+		}
+
+		.song-album img {
+			width: 32px;
+			height: 32px;
+
+		}
+
+		.song-title {
+			font-size: 16px;
+		}
+
+		.song-details {
+			padding-left: 7px;
+			text-align: left;
+			display: grid;
+		}
+
+		.song-author {
+			color: #777;
+			font-size: 11px;
+		}
+
+		.sidebar {
+			padding-top: 100px;
+			position: absolute;
+			width: 30%;
+		}
+
+		.sidebar .menu {
+			padding : 50px;
+			width: 20%;
+		}
+
+		.sidebar .menu a {
+			text-align: center;
+			font-size: 24px;
+			color: darkgrey;
+		}
+
+		.sidebar .menu a.active {
+			color: white;
+		}
+
+	</style>
+
+	<div class="bar drag fixed-top">
+    <div class="title"> <span>Pulse</span> </div>
+    <div class="cmd-btns">
+
+        <div class="no-drag pointer cmd-btn" id="btn-minimize"> <i class="material-icons tiny" title="Minimize">remove</i> </div>
+        <div class="no-drag pointer cmd-btn" id="btn-maximize">
+  	    	<i id="icon_maximize" class="material-icons tiny" title="Maximize">crop_square</i>
+        	<i id="icon_restore" class="material-icons tiny hide" title="Restaure">filter_none</i>
+        </div>
+        <div class="no-drag pointer cmd-btn hover-red" id="btn-close"> <i class="material-icons tiny" title="Close">close</i> </div>
+    </div>
+</div>
+
+	<div id="app">
+
+		<div class="sidebar fixed-top">
+			<div class="menu fixed-top">
+				<br/><br/><br/>
+				<a class="active">My library</a> <br/>
+				<a onclick="alert('popup');">Popup</a> <br/>
+				<a onclick="trayTest();">Ballon</a>
+			</div>
+		</div>
+
+		<div class="app-body">
+			<div class="page-content">
+				<div class="row-col">
+					<div class="col-lg-9 b-r no-border-md">
+						<div class="sda">
+							<div class="row item-list item-list-md item-list-li m-b">
+								<!-- START: Song List -->
+								<div id="musicList">
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="player" class="fixed-bottom">
+			<div id="player1" class="aplayer"></div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="libraries/jquery/jquery-3.4.1.min.js"></script>
+	<script src="scripts/player.js"></script>
+	<script type="text/javascript" src="scripts/playerdata.js"></script>
+	<script type="text/javascript" src="scripts/musicmanager.js"></script>
+	<script type="text/javascript" src="scripts/buttonHandler.js"></script>
+</html>
