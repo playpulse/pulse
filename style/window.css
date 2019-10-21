@@ -1,0 +1,65 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;8
+    user-select: none;
+    overflow: hidden;
+    color: #FFF;
+}
+
+.drag {
+    -webkit-app-region:drag;
+}
+
+.no-drag {
+    -webkit-app-region: no-drag
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.bar {
+    background-color: #0b121e;
+    top:0px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+.title {
+    float: left;
+    margin: 0px 0 0 10px;
+    color: #FFF;
+    font-family: calibri;
+    font-size: 20px;
+}
+
+.cmd-btns {
+    float: right;
+    color: white;
+}
+
+.cmd-btn {
+    float: left;
+    width: 35px;
+    height: 30px;
+    text-align: center;
+}
+
+.cmd-btn:hover {
+    background: rgba( 255, 255, 255, 0.1 );
+}
+
+.hide {
+    display: none;
+}
+
+.hover-red:hover {
+    background: red;
+}
+
+.shortcut-or {
+    color: #AAA;
+}
