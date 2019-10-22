@@ -4,8 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start" : "electron ."
+    "start": "electron ."
   },
   "author": "Sammwy <sammwy.dev@gmail.com>",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "discord-rpc": "^3.1.0"
+  }
 }
