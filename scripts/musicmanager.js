@@ -52,7 +52,7 @@ function getPlayFunction (file, url) {
 		author = "Unknown";
 	}
 
-	return `ap1.pause(); ap1.list.clear(); ap1.list.add([{
+	return `rpcupdate('${song}', '${author}'); ap1.pause(); ap1.list.clear(); ap1.list.add([{
       name: '${song}',
       artist: '${author}',
       url: '${url}',
@@ -67,3 +67,21 @@ function getRandomRgb() {
   var b = num & 255;
   return 'rgb(' + r + ', ' + g + ', ' + b + ')';
 }
+
+function rpcupdate (song, author) {
+	ipc.send("rpcupdate", song, author);
+	trayTest("Now playing", song + " - " + author);
+}
+
+function switchStatus (status) {
+	ipc.send("switchstatus", status);
+}
+
+ap1.on('play', function () {
+    switchStatus ('playing_song');
+    setCurrentTheme();
+});
+
+ap1.on('pause', function () {
+    switchStatus ('song_paused')
+});

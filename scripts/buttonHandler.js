@@ -16,6 +16,6 @@ document.getElementById( 'btn-close' ).addEventListener( 'click', function() {
     ipc.send( 'will-close-mainwindow' )
 } );
 
-function trayTest () {
-	ipc.send('tray-test');
+function trayTest (title, text) {
+	ipc.send('tray', title, text);
 }
