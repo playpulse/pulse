@@ -1,3 +1,3 @@
 # Pulse
-Pulse is a free and open-source little music player with cool design.
-(Re-code in coming)
+Pulse is a free and open-source little music player with cool design.   
+(recode pending)
