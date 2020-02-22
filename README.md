@@ -4,6 +4,7 @@ Pulse is a free and open-source little music player with cool design.
 ### Features
 - Free and Open source
 - Cool design
+- Custom titlebar
 - Discord Rich Presence
 - Search in the system music directory for wav and mp3 files.
 - Also search in directory.
@@ -16,8 +17,8 @@ Pulse is a free and open-source little music player with cool design.
 
 ### Dependencies
 - [Nodejs](https://nodejs.org/es/)
-- Electron **(npm install electron)
-- DiscordRPC **(npm install discord-rpc)
+- Electron (npm install electron)
+- DiscordRPC (npm install discord-rpc)
 
 ### Build
 1) Clone/download and extract it.
@@ -27,4 +28,4 @@ Pulse is a free and open-source little music player with cool design.
 ### Screenshot
 ![screenshot-1](https://i.imgur.com/U2m6eft.png)
 
-### Coded with ❤️ (Love)
+###### Coded with ❤️ (Love)
