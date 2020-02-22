@@ -1,0 +1,64 @@
+* {
+	font-family: arial;
+	font-size: 18px;
+}
+
+body {
+	overflow: hidden;
+	background-color: #232327;
+}
+
+button {
+	padding: 10px 30px;
+	border: none;
+	background-color: #111;
+	color: white;
+	font-size: 15px;
+	cursor: pointer;
+}
+
+.settings-body {
+	margin: auto;
+	width: 70%;
+	padding-top: 40px;
+	height: 86%;
+	min-height: 86%;
+	max-height: 86%;
+}
+
+.settings-panel {
+	padding-top: 30px;
+}
+
+.settings-buttons {
+	display: fixed; 
+	bottom: 0; 
+	float: right;  
+	padding-right: 20px;
+}
+
+.s-l {
+	float: left;
+}
+
+.s-r {
+	float: right;
+}
+
+.section {
+	text-align: center;
+	width: 50%;
+	margin: auto;
+	font-style: bold;
+}
+
+.settings-option {
+	font-size: 15px;
+}
+
+.settings-section, .settings-panel, .settings-option {
+	padding-bottom: 40px;
+	display: block;
+	width: 100%;
+	position: relative;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/titlebar.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/pulse.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/player.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/framework.css">
+</head>
+<body>
+	<!-- Content -->
+	<div id="app">
+		<div class="row-col">
+			<div id="path-list" class="col-xs-6">
+				<button class="folder folder-selected" onclick="switchToDirectory(remote.getGlobal('musicPath'),this)">Music library</button>
+				<button class="folder" onclick="switchToDirectory(remote.getGlobal('dlPath'), this)">Downloads</button>
+			</div>
+
+			<div class="app-body" id="path-explorer" class="col-xs-6">
+				<div class="page-content">
+					<div class="row-col">
+						<div class="col-lg-9 b-r no-border-md">
+							<div class="sda">
+								<div class="row item-list item-list-md item-list-li m-b">
+									<div id="musicList">
+										
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Player footer -->
+	<div class="theme-dark player-container">
+		<div id="player" style="background: none"></div>
+	</div>
+
+	<!-- Scripts -->
+	<script type="text/javascript" src="../assets/js/discordrpc.js"></script>
+    <script type="text/javascript" src="../assets/js/aplayer.lib.js"></script>
+    <script type="text/javascript" src="../assets/js/local-music-explorer.js"></script>
+    <script type="text/javascript" src="../assets/js/player.js"></script>
+</body>
+</html>
