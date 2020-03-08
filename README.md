@@ -25,6 +25,11 @@ Pulse is a free and open-source little music player with cool design.
 2) Open a terminal/cmd in the root directory of the project.
 3) Use in the terminal/cmd `electron ./src` or `npm start`
 
+### ToDo
+[ ] Add theme support
+[ ] Add settings menu
+[ ] Add transparency
+
 ### Screenshot
 ![screenshot-1](https://i.imgur.com/U2m6eft.png)
 
