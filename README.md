@@ -33,4 +33,4 @@ Pulse is a free and open-source little music player with cool design.
 ### Screenshot
 ![screenshot-1](https://i.imgur.com/U2m6eft.png)
 
-###### Coded with ❤️ (Love)
+###### Made with ❤️ (Love)
