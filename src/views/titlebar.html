@@ -1,24 +1,37 @@
 <html>
     <head>
+        <link rel="stylesheet" type="text/css" href="../assets/css/variables.css">
         <link rel="stylesheet" type="text/css" href="../assets/css/titlebar.css">
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline';">
+        <div id="user-styles"></div>
     </head>
     <body>
         <div class="bar drag title-bar">
-            <div class="no-drag pointer cmd-btn" id="btn-home"> <i class="material-icons tiny" title="Minimize">home</i> </div>
-            <div class="no-drag pointer cmd-btn" id="btn-back"> <i class="material-icons tiny" title="Minimize">keyboard_arrow_left</i> </div>
-            <div class="no-drag pointer cmd-btn" id="btn-next"> <i class="material-icons tiny" title="Minimize">keyboard_arrow_right</i> </div>
-            <div class="no-drag pointer cmd-btn" id="btn-refresh"> <i class="material-icons tiny" title="Minimize">cached</i> </div>
+        	<!--
+            <div class="no-drag pointer titlebar-btn" id="btn-settings"> <i class="material-icons tiny" title="Minimize">settings</i> </div>
 
-            <div class="cmd-btns">
-                <div class="no-drag pointer cmd-btn" id="btn-minimize"> <i class="material-icons tiny" title="Minimize">remove</i> </div>
-                <div class="no-drag pointer cmd-btn" id="btn-maximize">
+            <div class="no-drag pointer titlebar-btn" id="btn-home"> <i class="material-icons tiny" title="Minimize">home</i> </div>
+            <div class="no-drag pointer titlebar-btn" id="btn-back"> <i class="material-icons tiny" title="Minimize">keyboard_arrow_left</i> </div>
+            <div class="no-drag pointer titlebar-btn" id="btn-next"> <i class="material-icons tiny" title="Minimize">keyboard_arrow_right</i> </div>
+       		-->
+            <div class="no-drag pointer titlebar-btn" id="btn-refresh"> <i class="material-icons tiny" title="Minimize">cached</i> </div>
+
+            <div class="title" style="margin-top: 7px;"> <span style="font-size: 14px;">Pulse</span> </div>
+
+            <div class="right-btns">
+                <div class="no-drag pointer titlebar-btn" id="btn-minimize"> <i class="material-icons tiny" title="Minimize">remove</i> </div>
+                <div class="no-drag pointer titlebar-btn" id="btn-maximize">
                     <i id="icon_maximize" class="material-icons tiny" title="Maximize">crop_square</i>
                     <i id="icon_restore" class="material-icons tiny hide" title="Restaure">filter_none</i>
                 </div>
-                <div class="no-drag pointer cmd-btn hover-red" id="btn-close"> <i class="material-icons tiny" title="Close">close</i> </div>
+                <div class="no-drag pointer titlebar-btn" id="btn-close"> <i class="material-icons tiny" title="Close">close</i> </div>
             </div>
         </div>
+        
+
+        <div class="body">
+            <br/>
+        </div>
         <script type="text/javascript" src="../assets/js/titlebar.js"></script>
+        <script type="text/javascript" src="../assets/js/themes.js"></script>
     </body>
 </html>

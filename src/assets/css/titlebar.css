@@ -2,9 +2,6 @@
 .title-bar {
     margin: 0;
     padding: 0;
-    -webkit-user-select: none;
-    -webkit-app-region: drag;
-    background-color: rgb(20, 20, 20);
 }
 
 html, body {
@@ -13,6 +10,19 @@ html, body {
     height: 100%;
     user-select: none;
     color: #FFF;
+    background-color: var(--titlebar-background-color);
+}
+
+body {
+  background: var(--background-image) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+.body {
+  min-height: 100%;
+  min-width: 100%;
+  background-color: var(--border-colors);
 }
 
 .drag {
@@ -48,12 +58,12 @@ html, body {
 	padding-top: 4px;
 }
 
-.cmd-btns {
+.right-btns {
     float: right;
     color: white;
 }
 
-.cmd-btn {
+.titlebar-btn {
     float: left;
     width: 20px;
     height: 10px;
@@ -63,16 +73,18 @@ html, body {
     font-size: 18px;
 }
 
-.cmd-btn:hover {
+.titlebar-btn:hover {
     background: rgba( 255, 255, 255, 0.1 );
+    color: #ff55aa;
 }
 
 .hide {
     display: none;
 }
 
-.hover-red:hover {
+#btn-close:hover {
     background: red;
+    color: white;
 }
 
 .shortcut-or {

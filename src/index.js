@@ -1,7 +1,11 @@
 // Libraries
 const { app, BrowserWindow, BrowserView, globalShortcut, Menu, ipcMain, systemPreferences } = require( 'electron' );
 const remote = require('electron').remote;
+const electronStore = require('electron-store');
 const path = require('path');
+
+// Singleton
+const store = new electronStore();
 
 // Objects
 let mainWindow;
@@ -12,11 +16,16 @@ const musicPath = app.getPath("music");
 const dlPath = app.getPath("downloads");
 global.musicPath = musicPath;
 global.dlPath = dlPath;
+global.store = store;
 
-// Some utils variables
 const webUrl = path.join(__dirname, 'views/player.html');
 const windowSize = { width: 1280, height: 768 };
 const title = "Pulse";
+
+if (store.get('first-run') == null) {
+	store.set('first-run', false);
+	store.set('theme', 'default');
+}
 
 // App events
 app.on('ready', function() {
@@ -31,13 +40,14 @@ app.on('ready', function() {
         center: true, 
         resizable: true, 
         title: title,
-	    backgroundColor: '#111',
+      transparent: true,
 	    webPreferences: {
 	      	nodeIntegration: true
 	    }
   	});
 
   	view = new BrowserView( {
+        backgroundColor: '#23232355',
         webPreferences: {
             nodeIntegration: true
         }
@@ -49,7 +59,7 @@ app.on('ready', function() {
   	mainWindow.loadFile(path.join(__dirname, 'views/titlebar.html'));
   	view.webContents.loadFile(webUrl);
 
-    view.webContents.openDevTools();
+    // view.webContents.openDevTools();
 
   	// Main Window Events
   	mainWindow.on( 'closed', function () {
@@ -65,6 +75,12 @@ app.on('ready', function() {
             view.setBounds( { x: 1, y: 29, width: windowSize[0]-2, height: windowSize[1]-30 } );
         }
     } );
+
+
+    // View Events
+    view.webContents.on( 'did-navigate-in-page', function() {
+
+    } );
 });
 
 app.on('window-all-closed', function () {
@@ -73,10 +89,11 @@ app.on('window-all-closed', function () {
 
 // IPC Events
 ipcMain.on('app-close', function() {
-    app.exit();
+    app.quit();
 });
 
-ipcMain.on('view-reload', function() {
+ipcMain.on('app-reload', function() {
+  mainWindow.webContents.reload();
 	view.webContents.reload();
 });
 
@@ -90,4 +107,26 @@ ipcMain.on('view-back', function() {
 
 ipcMain.on('view-next', function() {
 	view.webContents.executeJavaScript('history.go(1);');
+});
+
+ipcMain.on('open-settings', function() {
+  const settings = new BrowserWindow({ 
+    parent: mainWindow, 
+    modal: true, 
+    frame: false, 
+    center: true, 
+    resizable: true, 
+    backgroundColor: '#232323', 
+    width: 800, 
+    icon: path.join( __dirname, 'assets/icon.png' ), 
+    webPreferences: {
+      nodeIntegration: true
+    }
+  });
+
+  settings.loadFile( path.join( __dirname, 'views/settings.html' ) );
+});
+
+ipcMain.on('set-setting', function(variable, value) {
+  view.webContents.executeJavaScript(`setSetting('${variable}', ${value})`);
 });

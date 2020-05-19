@@ -1,36 +1,76 @@
-:root {
-	--theme-color-2: #ff9098;
-}
-
 * {
 	font-family: arial;
 	color: white;
 }
 
-
 body {
-	/* Coming soon
-	background: url("../background.png") no-repeat center center fixed;
-	-webkit-background-size: cover;
-    background-size: cover;
-    */
-    background-color: #191919;
+	background-color: var(--background-color)
 }
 
 .theme-dark {
-	background-color: #121212;
 	color: white;
 }
 
-#app {
+
+#nav {
+	text-align: center;
+	margin: auto;
 	width: 100%;
-	padding-top: 40px;
-	max-height: -webkit-calc(100% - 76px);
-	min-height: -webkit-calc(100% - 76px);
+	height: 40px;
+	overflow: hidden;
+}
+
+#nav > button {
+	text-decoration: none;
+	color: white;
+	font-size: 19px;
+	padding: 0 10px;
+}
+
+#nav > button.selected {
+	color: var(--folders-title-color);
+}
+
+.search-input {
+	color: black;
+	border: none;
+	background: none;
+	border-bottom: 1px solid white;
+	width: 300px;
+	margin-left: 70px;
+	font-size: 20px
+}
+
+#yt-result-list {
+	margin-left: 70px;
+	margin-top: 20px;
+	color: grey;
+}
+
+.search-input:focus {
+	color: white;
+}
+
+.search-input:active {
+	color: grey;
+}
+
+.btn-send {
+	background: none;
+	color: white;
+	font-size: 18px;
+	border: none;
+}
+
+.app {
+	width: 100%;
+	padding-top: 20px;
+	max-height: -webkit-calc(100% - 76px - 40px);
+	min-height: -webkit-calc(100% - 76px - 40px);
 	overflow: scroll;
 	position: absolute;
 	overflow-x: hidden;
-	background-color: #191919aa;
+	background-color: var(--explorer-background);
 }
 
 #path-explorer {
@@ -50,7 +90,7 @@ body {
 	width: 100%;
 	bottom: 0;
 	z-index: 999;
-	background-color: #121212dd;
+	background-color: var(--player-background);
 }
 
 .song-btn {
@@ -59,7 +99,7 @@ body {
 
 /* Music folder */
 .folder {
-	background-color: transparent;
+	background-color: var(--folder-background);
 	width: 60%;
 	max-width: 280px;
 	height: 40px;
@@ -74,13 +114,18 @@ body {
 }
 
 .folder-selected {
-	color: var(--theme-color-2);
-	border-bottom: 1px solid var(--theme-color-2);
+	color: var(--folders-title-color);
+	border-bottom: 1px solid var(--folders-title-color);
 }
 
 .explorer-warn {
 	color: grey;
 	padding: 40px;
+}
+
+.btn-invi {
+	background: none;
+	border: none;
 }
 
 /* width */
@@ -90,12 +135,12 @@ body {
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background: #232323;
+    background: #0003;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: var(--theme-color-2);
+    background: var(--scroll-bar-color);
 }
 
 /* Handle on hover */

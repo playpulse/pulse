@@ -8,7 +8,7 @@ const rpc = new DiscordRPC.Client({ transport: 'ipc' });
 var timestamp;
 var currentState;
 
-var artists = ["rammstein", "skrillex", "andone", "nightcore", "linkinpark", "martingarrix", "alanwalker", "elrubiusomg"];
+var artists = ["asobiasobase", "fullmetalalchemist", "zombielandsaga", "deathnote", "dragonball", "dragonballz", "bokunoheroacademia", "pokemon", "blackclover", "naruto", "dororo", "highscoregirl", "evangelion", "digimon", "noragami", "nanatsunotaizai", "inuyasha", "ranma", "haiyorenyaruko-sanw", "yugioh!gx", "akamegakill", "watamote", "overlord", "tokyo ghoul", "rammstein", "skrillex", "andone", "nightcore", "linkinpark", "martingarrix", "alanwalker", "elrubiusomg"];
 
 function switchState (state) {
   currentState = state;

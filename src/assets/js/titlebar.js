@@ -14,7 +14,7 @@ document.getElementById( 'btn-maximize' ).addEventListener( 'click', function() 
 } );
 
 document.getElementById( 'btn-refresh' ).addEventListener( 'click', function() {
-    ipc.send('view-reload');
+    ipc.send('app-reload');
 } );
 
 document.getElementById( 'btn-back' ).addEventListener( 'click', function() {
@@ -31,4 +31,8 @@ document.getElementById( 'btn-home' ).addEventListener( 'click', function() {
         
 document.getElementById( 'btn-close' ).addEventListener( 'click', function() {
     ipc.send('app-close')
+} );
+
+document.getElementById( 'btn-settings' ).addEventListener( 'click', function() {
+    ipc.send('open-settings')
 } );

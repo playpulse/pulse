@@ -68,7 +68,7 @@ const player = new APlayer({
     fixed: false,
     listFolded: false,
     repeat: false,
-    theme: '#ff9098',
+    theme: '#ff55aa',
     preload: 'metadata'
 });
 

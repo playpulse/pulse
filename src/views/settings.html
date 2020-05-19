@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="../assets/css/titlebar.css">
+        <link rel="stylesheet" type="text/css" href="../assets/css/settings.css">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline';">
+    </head>
+    <body>
+        <div class="bar drag title-bar">
+            <span class="title">Settings</span>
+            <div class="cmd-btns">
+                <div class="no-drag pointer cmd-btn hover-red" id="btn-close"> <i class="material-icons tiny" title="Close">close</i> </div>
+            </div>
+        </div>
+
+        <div class="settings-body">
+            <div class="settings-panel">
+                <div class="settings-section">
+                    <div class="section">
+                        <span>Appearance</span>
+                    </div>
+                    <hr>
+                    <div class="settings-option">
+                        <span class="s-l">Color theme: </span>
+                        <input class="s-r" type="color" value="#ff9098" id="color-picker">
+                    </div>
+
+                    <div class="settings-option">
+                        <span class="s-l">Rainbow: </span>
+                        <input class="s-r" type="checkbox" value=1 id="rainbow">
+                    </div>
+
+                    <div class="settings-option">
+                        <span class="s-l">Rainbow speed: </span>
+                        <input class="s-r" type="range" value=1 id="rainbow-speed">
+                    </div>
+
+                    <div class="settings-option">
+                        <span class="s-l">Custom Background: </span>
+                        <input class="s-r" type="url" placeholder="url or empty for none" id="custom-background">
+                    </div>
+
+                    <div class="settings-option">
+                        <span class="s-l">Background Transparency: </span>
+                        <input class="s-r" type="range" value=60 id="bg-tr">
+                    </div>
+                </div>
+
+                <div class="settings-section">
+                    <div class="section">
+                        <span>Music</span>
+                    </div>
+                    <hr>
+                    <div class="settings-option">
+                        <span class="s-l">Directory: </span>
+                        <input class="s-r" type="url" value="c:/users/valen/music/" id="directory">
+                    </div>
+                </div>
+
+                <div class="settings-section">
+                    <div class="section">
+                        <span>Others</span>
+                    </div>
+                    <hr>
+                    <div class="settings-option">
+                        <span class="s-l">Discord Rich Presence: </span>
+                        <input class="s-r" type="checkbox" value=1 id="discord-rpc">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="settings-buttons">
+            <button>Cancel</button>
+            <button>Save</button>
+        </div>
+
+        <script type="text/javascript" src="../assets/js/settings.js"></script>
+    </body>
+</html>

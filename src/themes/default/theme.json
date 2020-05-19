@@ -1,0 +1,9 @@
+{
+	"author": "Sammwy",
+	"description": "Default theme for PulseApp",
+	"version": 1.0,
+	"website": "https://github.com/sammwyy/",
+	"styles": [
+		"style.css"
+	]
+}
