@@ -2,6 +2,7 @@
 Pulse is a free and open-source little music player with cool design.   
 
 ### Features
+- **(NEW)** Youtube downloader
 - Free and Open source
 - Cool design
 - Custom titlebar
@@ -19,18 +20,24 @@ Pulse is a free and open-source little music player with cool design.
 - [Nodejs](https://nodejs.org/es/)
 - Electron (npm install electron)
 - DiscordRPC (npm install discord-rpc)
+- Electron Store (npm install electron-store)
+- FFMPEG Binaries (npm install ffmpeg-binaries)
+- Youtube MP3 Downloader (npm install youtube-mp3-downloader)
+- Yutub (npm install yutub)
 
 ### Build
 1) Clone/download and extract it.
 2) Open a terminal/cmd in the root directory of the project.
-3) Use in the terminal/cmd `electron ./src` or `npm start`
+3) Install dependencies with `npm install`
+4) Use in the terminal/cmd `electron ./src` or `npm start`
 
 ### ToDo
 * [ ] Add theme support  
 * [ ] Add settings menu  
-* [ ] Add transparency  
+* [X] Add transparency  
 
 ### Screenshot
-![screenshot-1](https://i.imgur.com/U2m6eft.png)
+![screenshot-1](https://i.imgur.com/qmHe8Ma.jpg)
+![screenshot-2](https://i.imgur.com/usGdBT1.jpg)
 
 ###### Made with ❤️ (Love)
